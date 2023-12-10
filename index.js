@@ -8,17 +8,16 @@ let decimalToOctal = document.getElementById('decimalToOctal');
 let numberButtons = document.querySelectorAll('.btn-light');
 let selectedMode = '';
 
-
+// binary to decimal
 binaryToDecimal.addEventListener('click', function () {
-    // Disable buttons for numbers 2 to 9
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = true;
     }
 
-    // Display mode message
     modeMessage.innerHTML = 'Enter Binary number to convert into decimal';
 });
 
+// binary to Octal
 binaryToOctal.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = true;
@@ -27,6 +26,7 @@ binaryToOctal.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Binary number to convert into Octal';
 });
 
+// binary to Hexadecimal
 BinaryToHexadecimal.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = true;
@@ -35,6 +35,7 @@ BinaryToHexadecimal.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Binary number to convert into Hexadecimal';
 });
 
+// Decimal to binary
 decimalToBinary.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -43,6 +44,7 @@ decimalToBinary.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Decimal number to convert into Binary';
 });
 
+// Decimal to octal
 decimalToOctal.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -51,6 +53,7 @@ decimalToOctal.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Decimal number to convert into Octal';
 });
 
+// Decimal to Hexadecimal
 decimalToHexadecimal.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -59,6 +62,7 @@ decimalToHexadecimal.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Decimal number to convert into Hexadecimal';
 });
 
+// Octal to binary
 OctalToBinary.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -67,6 +71,7 @@ OctalToBinary.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Octal number to convert into Binary';
 });
 
+// Octal to decimal
 OctalToDecimal.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -75,6 +80,7 @@ OctalToDecimal.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Octal number to convert into Decimal';
 });
 
+// Octal to hexadecimal
 OctalToHexadecimal.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -83,6 +89,7 @@ OctalToHexadecimal.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Octal number to convert into Hexadecimal';
 });
 
+// Hexadecimal to binary
 HexadecimalToBinary.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -91,6 +98,7 @@ HexadecimalToBinary.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Hexadecimal number to convert into Binary';
 });
 
+// Hexadecimal to decimal
 HexadecimalToDecimal.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -99,6 +107,7 @@ HexadecimalToDecimal.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Hexadecimal number to convert into Decimal';
 });
 
+// Hexadecimal to octal
 HexadecimalToOctal.addEventListener('click', function() {
     for (let i = 2; i <= 9; i++) {
         document.getElementById('btn' + i).disabled = false;
@@ -107,8 +116,7 @@ HexadecimalToOctal.addEventListener('click', function() {
     modeMessage.innerHTML = 'Enter Hexadecimal number to convert into Octal';
 });
 
-// Binary to Decimal conversion
-
+// selection of the converter you want
 const selectMode = (mode) => {
     selectedMode = mode;
     modeMessage.innerHTML = `Enter ${mode} number`;
