@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="calculator" class="container bg-secondary p-4 rounded">
+        <div id="modeMessage" class="text-white"></div>
+        <div id="display" class="bg-light"></div>
+        <div id="displayConversion" class="bg-light"></div>
+
+        <div class="dropdown">
+            <button class="btn operation dropdown-toggle text-white px-5" style="width: 100%;" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Operation
+            </button>
+            <div class="dropdown-menu dropdown-menu-scrollable" style="width: 100%;" aria-labelledby="dropdownMenuButton">
+                <a id="binaryToDecimal" class="dropdown-item" onclick="selectMode('Binary to Decimal')">Binary to Decimal</a>
+                <a id="binaryToOctal" class="dropdown-item" onclick="selectMode('Binary to Octal')">Binary to Octal</a>
+                <a id="BinaryToHexadecimal" class="dropdown-item" onclick="selectMode('Binary to Hexadecimal')">Binary to Hexadecimal</a>
+                <a id="decimalToBinary" class="dropdown-item" onclick="selectMode('Decimal to Binary')">Decmial to Binary</a>
+                <a id="decimalToOctal" class="dropdown-item" onclick="selectMode('Decimal to Octal')">Decimal to Octal</a>
+                <a id="decimalToHexadecimal" class="dropdown-item" onclick="selectMode('Decimal to Hexadecimal')">Decimal to Hexadecimal</a>
+                <a id="OctalToBinary" class="dropdown-item" onclick="selectMode('Octal to Binary')">Octal to Binary</a>
+                <a id="OctalToDecimal" class="dropdown-item" onclick="selectMode('Octal to Decimal')">Octal to Decimal</a>
+                <a id="OctalToHexadecimal" class="dropdown-item" onclick="selectMode('Octal to Hexadecimal')">Octal to Hexadecimal</a>
+                <a id="HexadecimalToBinary" class="dropdown-item" onclick="selectMode('Hexadecimal to Binary')">Hexadecimal to Binary</a>
+                <a id="HexadecimalToDecimal" class="dropdown-item" onclick="selectMode('Hexadecimal to Decimal')">Hexadecimal to Decimal</a>
+                <a id="HexadecimalToOctal" class="dropdown-item" onclick="selectMode('Hexadecimal to Octal')">Hexadecimal to Octal</a>
+            </div>
+        </div>
+
+        <div class="ml-3">
+            <button onclick="clearDisplay()" class="btn btn-light">C</button>
+            <button onclick="appendToDisplay('/')" class="btn operator">/</button>
+            <button onclick="appendToDisplay('*')" class="btn operator">*</button>
+            <button id="btn8" onclick="appendToDisplay('8')" class="btn btn-light">8</button>
+            <button id="btn9" onclick="appendToDisplay('9')" class="btn btn-light">9</button>
+            <button id="btn7" onclick="appendToDisplay('7')" class="btn btn-light">7</button>
+            <button id="btn6" onclick="appendToDisplay('6')" class="btn btn-light">6</button>
+            <button id="btn5" onclick="appendToDisplay('5')" class="btn btn-light">5</button>
+            <button id="btn4" onclick="appendToDisplay('4')" class="btn btn-light">4</button>
+            <button id="btn3" onclick="appendToDisplay('3')" class="btn btn-light">3</button>
+            <button id="btn2" onclick="appendToDisplay('2')" class="btn btn-light">2</button>
+            <button id="btn1" onclick="appendToDisplay('1')" class="btn btn-light">1</button>
+            <button id="btn0" onclick="appendToDisplay('0')" class="btn btn-light">0</button>
+            <button onclick="appendToDisplay('.')" class="btn btn-light">.</button>
+            <button onclick="convert()" class="btn operator" style="width: 35%;">Convert</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
